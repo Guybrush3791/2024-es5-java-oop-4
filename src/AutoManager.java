@@ -26,6 +26,18 @@ public class AutoManager {
      * rimuove l'auto all'indice specificato per argomento, ritorna true se
      * e' stata fatta effettivamente l'eliminazione, false altrimenti
      * 
+     * TL;DR
+     * 
+     * aggiungere alla classe AutoManager le seguenti funzioni:
+     * - void : addAll(Auto[] autos)
+     * aggiunge tutti gli elementi dell'array in input all'array di Auto
+     * - void : clear()
+     * svuota l'array di Auto
+     * - boolean : isEmpty()
+     * ritorna true se l'array di Auto e' vuoto, false altrimenti
+     * - void : reversed()
+     * inverte l'ordine degli elementi nell'array di Auto
+     * 
      */
 
     private int index;
