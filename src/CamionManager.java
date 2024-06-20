@@ -60,8 +60,13 @@ public class CamionManager {
         int maxCarico = Integer.MIN_VALUE;
         Camion camionMaxCarico = null;
 
-        for (Camion c : getCamions()) {
+        // for (Camion c : getCamions()) {
+        for (int x = 0; x < index; x++) {
 
+            Camion c = camions[x];
+
+            // if (c == null)
+            // continue;
             if (c.getCarico() > maxCarico) {
 
                 maxCarico = c.getCarico();

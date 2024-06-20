@@ -50,8 +50,9 @@ public class App {
      * rimuove l'ultima auto presente nell'array, ritorna true se
      * e' stata fatta effettivamente l'eliminazione, false altrimenti
      * - boolean : remove(int)
-     * rimuove l'ultima auto presente nell'array, ritorna true se
+     * rimuove l'auto all'indice specificato per argomento, ritorna true se
      * e' stata fatta effettivamente l'eliminazione, false altrimenti
+     * 
      */
 
     public static void main(String[] args) throws Exception {
@@ -92,5 +93,6 @@ public class App {
         manager.add(camion5);
 
         System.out.println(manager);
+        System.out.println(manager.getMaxCaricoCamion());
     }
 }
