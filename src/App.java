@@ -28,9 +28,69 @@ public class App {
      * `Camion` e `Moto` e testare il corretto funzionamento
      * di ogni classe
      * 
+     * ----------------------------------------------------------------
+     * 
+     * TODO:
+     * 
+     * Creare una classe AutoManager che si occupera' di gestire un array
+     * di Auto
+     * 
+     * La classe deve implementare i seguenti metodi:
+     * - void : add(Auto)
+     * per aggiungere un auto al parco auto presente
+     * - Auto : getMaxPotenzaAuto()
+     * per restituire l'auto con la potenza maggiore
+     * - toString
+     * ritorna il numero di auto presenti e tutti i dati delle auto
+     * 
+     * BONUS:
+     * 
+     * Aggiungere il seguente metodo alla classe:
+     * - boolean : remove()
+     * rimuove l'ultima auto presente nell'array, ritorna true se
+     * e' stata fatta effettivamente l'eliminazione, false altrimenti
+     * - boolean : remove(int)
+     * rimuove l'ultima auto presente nell'array, ritorna true se
+     * e' stata fatta effettivamente l'eliminazione, false altrimenti
      */
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        // test1();
+        testCamionManager();
+    }
+
+    public static void test1() {
+
+        Veicolo veicolo = new Veicolo("Fiat", "Punto");
+        System.out.println(veicolo);
+
+        Auto auto = new Auto("Fiat", "Punto", 1400, 80);
+        System.out.println(auto);
+
+        Camion camion = new Camion("Iveco", "Eurocargo", 3000, 150, 10000, true);
+        System.out.println(camion);
+
+        Moto moto = new Moto("Honda", "CBR", true, true);
+        System.out.println(moto);
+    }
+
+    public static void testCamionManager() {
+
+        CamionManager manager = new CamionManager();
+
+        Camion camion1 = new Camion("Iveco", "Eurocargo", 3000, 150, 10000, true);
+        Camion camion2 = new Camion("Citroen", "Jumper", 2500, 120, 8000, false);
+        Camion camion3 = new Camion("Fiat", "Ducato", 2000, 100, 5000, false);
+        Camion camion4 = new Camion("Renault", "Master", 2200, 110, 6000, true);
+        Camion camion5 = new Camion("Mercedes", "Sprinter", 2800, 140, 9000, true);
+
+        manager.add(camion1);
+        manager.add(camion2);
+        manager.add(camion3);
+        manager.add(camion4);
+        manager.add(camion5);
+
+        System.out.println(manager);
     }
 }
