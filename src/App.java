@@ -27,9 +27,11 @@ public class App {
      * 6. Creare delle istanze di `Veicolo`, `Auto`,
      * `Camion` e `Moto` e testare il corretto funzionamento
      * di ogni classe
-     * 
-     * ----------------------------------------------------------------
-     * 
+     */
+
+    // ----------------------------------------------------------------
+
+    /*
      * TODO:
      * 
      * Creare una classe AutoManager che si occupera' di gestire un array
@@ -58,7 +60,10 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // test1();
-        testCamionManager();
+        // testCamionManager();
+        testAutoManager();
+
+        System.out.println("The end");
     }
 
     public static void test1() {
@@ -94,5 +99,34 @@ public class App {
 
         System.out.println(manager);
         System.out.println(manager.getMaxCaricoCamion());
+    }
+
+    public static void testAutoManager() {
+
+        AutoManager autoManager = new AutoManager();
+
+        Auto auto1 = new Auto("Fiat", "Punto", 1400, 80);
+        Auto auto2 = new Auto("Ford", "Fiesta", 1200, 70);
+        Auto auto3 = new Auto("Renault", "Clio", 1300, 75);
+        Auto auto4 = new Auto("Volkswagen", "Golf", 1600, 90);
+        Auto auto5 = new Auto("Opel", "Corsa", 1500, 85);
+
+        autoManager.add(auto1);
+        autoManager.add(auto2);
+        autoManager.add(auto3);
+        autoManager.add(auto4);
+        autoManager.add(auto5);
+
+        System.out.println(autoManager);
+        System.out.println("Auto con la potenza maggiore: " + autoManager.getMaxPotenzaAuto());
+
+        autoManager.remove();
+        System.out.println(autoManager);
+
+        autoManager.remove(1);
+        System.out.println(autoManager);
+
+        // autoManager.remove();
+        // System.out.println(autoManager);
     }
 }
