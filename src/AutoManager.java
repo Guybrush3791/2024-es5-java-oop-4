@@ -89,6 +89,39 @@ public class AutoManager {
         setAutos(newAutos);
     }
 
+    public void addAll(Auto[] autos) {
+
+        for (Auto auto : autos) {
+            add(auto);
+        }
+    }
+
+    public void clear() {
+
+        for (int x = 0; x < index; x++) {
+            autos[x] = null;
+        }
+
+        index = 0;
+    }
+
+    public boolean isEmpty() {
+
+        return index < 1;
+    }
+
+    public void reversed() {
+
+        Auto[] reversed = new Auto[getAutos().length];
+
+        for (int x = 0; x < getIndex(); x++) {
+
+            reversed[x] = getAutos()[getIndex() - x - 1];
+        }
+
+        setAutos(reversed);
+    }
+
     public Auto getMaxPotenzaAuto() {
 
         int maxPotenza = Integer.MIN_VALUE;

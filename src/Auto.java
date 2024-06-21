@@ -1,11 +1,12 @@
-public class Auto extends Veicolo {
+public class Auto extends Veicolo implements PortiereDotati, CintureDotati {
 
     private int cilindrata;
     private int potenza;
 
-    public Auto(String marca, String modello, int cilindrata, int potenza) {
+    public Auto(int peso, String marca, String modello, int cilindrata, int potenza) {
 
-        super(marca, modello);
+        super(peso, marca, modello);
+        // super();
 
         setCilindrata(cilindrata);
         setPotenza(potenza);
@@ -32,4 +33,44 @@ public class Auto extends Veicolo {
 
         return super.toString() + " " + "cc: " + getCilindrata() + " CV: " + getPotenza();
     }
+
+    @Override
+    public void turnOn() {
+
+        System.out.println("Brum");
+    }
 }
+
+/**
+ * abstract class Shape:
+ * String color;
+ * 
+ * public Shape() { // ... }
+ * public Shape(String color) { // ... }
+ * 
+ * - abstract getPer() : int;
+ * - abstract getArea() : int;
+ * 
+ * class Square extends Shape:
+ * - int side;
+ * - getPer() {
+ * // ...
+ * }
+ * - getArea() {
+ * // ...
+ * }
+ * 
+ * class Rect extends Square: // ...
+ * class Circle extends Shape: // ...
+ */
+
+/**
+ * Person
+ * String name
+ * String lastname;
+ * 
+ * abstract getYearSalary();
+ * 
+ * Employee extends Person
+ * Boss extends Person
+ */

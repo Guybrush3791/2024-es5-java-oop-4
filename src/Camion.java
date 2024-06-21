@@ -4,10 +4,10 @@ public class Camion extends Auto {
     private boolean rimorchio;
 
     public Camion(
-            String marca, String modello, int cilindrata, int potenza,
+            int peso, String marca, String modello, int cilindrata, int potenza,
             int carico, boolean rimorchio) {
 
-        super(marca, modello, cilindrata, potenza);
+        super(peso, marca, modello, cilindrata, potenza);
 
         setCarico(carico);
         setRimorchio(rimorchio);
@@ -33,5 +33,11 @@ public class Camion extends Auto {
     public String toString() {
 
         return super.toString() + " carico: " + getCarico() + " rimorchio (yes/no): " + isRimorchio();
+    }
+
+    @Override
+    public void turnOn() {
+
+        System.out.println("Sroom");
     }
 }

@@ -3,10 +3,10 @@ public class Moto extends Veicolo {
     private boolean bauletto;
     private boolean casco;
 
-    public Moto(String marca, String modello,
+    public Moto(int peso, String marca, String modello,
             boolean bauletto, boolean casco) {
 
-        super(marca, modello);
+        super(peso, marca, modello);
 
         setBauletto(bauletto);
         setCasco(casco);
@@ -32,5 +32,11 @@ public class Moto extends Veicolo {
     public String toString() {
 
         return super.toString() + " bauletto (yes/no): " + isBauletto() + " casco (yes/no): " + isCasco();
+    }
+
+    @Override
+    public void turnOn() {
+
+        System.out.println("Vroom");
     }
 }
